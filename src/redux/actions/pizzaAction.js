@@ -23,10 +23,10 @@ export const LoadingFinish = () => {
 export const addPizzas = (sort, filterValue, arrayOfTypeSort) => {
     return dispatch => {
         dispatch(LoadingStart())
-        axios.get(`http://localhost:3001/pizzas?${filterValue === 0 ? '' : `category=${filterValue}`}&_sort=${arrayOfTypeSort[sort]}&_order=asc}`).then(response => {
+        axios.get(`/pizzas?${filterValue === 0 ? '' : `category=${filterValue}`}&_sort=${arrayOfTypeSort[sort]}&_order=asc}`).then(response => {
             dispatch(fetchPizzas(response.data))
             dispatch(LoadingFinish())
         })
-        
+
     }
 }
