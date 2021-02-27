@@ -1,9 +1,6 @@
 @import '../variables';
 
 .categories {
-	@media screen and (min-width: 1000px) {
-		background-color: blue;
-	}
 	ul {
 		display: flex;
 
